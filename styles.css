@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgb(29, 30, 34), rgb(0, 0, 77)); 
+    background-image: url(https://res.cloudinary.com/drpcjt13x/image/upload/v1605112713/Proyectos/Christmas%20Lights/santa-claus_uq7xkg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(https://res.cloudinary.com/drpcjt13x/image/upload/v1605112711/Proyectos/Christmas%20Lights/theater-curtain_ylkoid.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transition: 2.5s ease;
+    z-index: 99;
+}
+
+.overlay-open {
+    width: 0;
+    left: 100%;
+}
+
+/* String of lights */
+.stringLights {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    margin: -15px 0 0 0;
+    padding: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 140px;
+}
+
+li {
+    position: relative;
+    animation-fill-mode: both; 
+    animation-iteration-count:infinite;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin: 20px;
+    display: inline-block;
+    background: rgb(77, 76, 76);
+}
+
+/* Animation for yellow lights */
+ul li.yellow {
+    background: rgba(255,255,0,1);  
+    box-shadow: 0px 3px 27px 3px rgba(255,255,0,1);
+    animation-name: flash-1;
+    animation-duration: 0.9s;
+}
+
+/* Animation for blue lights */
+ul li.blue {      
+    background: rgba(0,255,255,1);
+    box-shadow: 0px 3px 27px 3px rgba(0,255,255,1);
+    animation-name: flash-2;
+    animation-duration: 1s;
+}
+
+/* Animation for red lights */
+ul li.red {    
+    background: rgba(255,0,0,1);
+    box-shadow: 0px 3px 27px 3px rgba(255,0,0,1);
+    animation-name: flash-3;
+    animation-duration: 1.2s;
+}
+
+/* Animation for green lights */
+ul li.green {
+    background: rgba(0,179,0,1);
+    box-shadow: 0px 3px 27px 3px rgba(0,179,0,1);
+    animation-name: flash-4;
+    animation-duration: 1.4s;
+}
+
+/* Animation for purple lights */
+ul li.purple {
+    background: rgba(153,51,153,1);
+    box-shadow: 0px 3px 27px 3px rgba(153,51,153,1);
+    animation-name: flash-5;
+    animation-duration: 1.5s;
+}
+
+/* bulbs socket */
+ul li:before {
+    content: "";
+    position: absolute;
+    background: #222;
+    width: 15px;
+    height: 15px;
+    border-bottom: solid #444 1px;
+    border-radius: 3px;
+    top: -14px;
+    left: 13px;
+}
+
+/* lamp cable */
+ul li:after {
+    content: "";
+    top: -14px;
+    left: 25px;
+    position: absolute;
+    width: 70px;
+    height: 18px;
+    border-bottom: solid #222 2px;
+    border-radius: 100%;
+}
+
+ul li:last-child:after {
+  content: none;
+}
+
+/* Animation progress for bulbs from 0% to 100% */
+@keyframes flash-1 {
+  0%, 100% {
+    background: rgba(255,255,0,1);
+    box-shadow: 0px 3px 27px 3px rgba(255,255,0,1);
+  }   
+  50% { 
+    background: rgba(255,255,0,0.4);
+    box-shadow: 0px 3px 27px 3px rgba(255,255,0,0.2);
+  }
+}
+
+@keyframes flash-2 {
+  0%, 100% {
+    background: rgba(0,255,255,1);
+    box-shadow: 0px 3px 27px 3px rgba(0,255,255,1);
+  }
+  50% { 
+    background: rgba(0,255,255,0.4);
+    box-shadow: 0px 3px 27px 3px rgba(0,255,255,0.2);
+  }
+}
+
+@keyframes flash-3 {
+  0%, 100% {
+    background: rgba(255,0,0,1);
+    box-shadow: 0px 3px 27px 3px rgba(255,0,0,1);
+  }
+  50% {
+    background: rgba(255,0,0,0.4);
+    box-shadow: 0px 3px 27px 3px rgba(255,0,0,0.2);
+  }
+}
+
+@keyframes flash-4 {
+  0%, 100% {
+    background: rgba(0,179,0,1);
+    box-shadow: 0px 3px 27px 3px rgba(0,179,0,1);
+  }
+  50% {
+    background: rgba(0,179,0,0.4);
+    box-shadow: 0px 3px 27px 3px rgba(0,179,0,0.2);
+  }
+}
+
+@keyframes flash-5 {
+  0%, 100% {
+    background: rgba(153,51,153,1);
+    box-shadow: 0px 3px 27px 3px rgba(153,51,153,1);
+  }
+  50% {
+    background: rgba(153,51,153,0.4);
+    box-shadow: 0px 3px 27px 3px rgba(153,51,153,0.2);
+  }
+}
+
+/* Centered Title */
+#title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.neon {
+    font-family: 'Courgette', cursive;
+    font-size: 60px;
+    color: rgb(77, 76, 76);
+    text-align: center;
+}
+.glow {
+    color: #fff;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+/* Animation progress for title from 0% to 100% */
+@keyframes glow {
+    0% {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    
+    100% {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+}
+  
+/* Control Switch */
+#control {
+    position: absolute;
+    top: 40%;
+    left: 2%;
+    z-index: 999;
+}
+
+/* Button */
+.on {
+    background-image: url(https://res.cloudinary.com/drpcjt13x/image/upload/v1605112711/Proyectos/Christmas%20Lights/switch-on-small_jzngcr.png); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 65px; 
+    height: 95px;
+    border: 1px solid #f2f2f2;
+    border-radius: 6px;
+    box-shadow: 0px 3px 35px 23px rgba(22, 20, 20, 0.7);
+    cursor: pointer;
+  
+}
+
+.off {
+    background-image: url(https://res.cloudinary.com/drpcjt13x/image/upload/v1605112711/Proyectos/Christmas%20Lights/switch-off-small_jkpnwq.png); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* media queries for small devices */
+@media screen and (max-width: 500px) {
+
+    #control {
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}
