@@ -1,7 +1,7 @@
 
 # Christmas Lights
 
-![Christmas Lights](https://res.cloudinary.com/drpcjt13x/image/upload/v1605118867/Proyectos/Christmas%20Lights/Desktop_-_Christmas_Lights_xojhik.png "Christmas Lights")
+![Christmas Lights](https://res.cloudinary.com/drpcjt13x/image/upload/v1605208453/Proyectos/Christmas%20Lights/Desktop_-_Christmas_Lights_nevhiq.png "Christmas Lights")
 
 ## Description:
 
@@ -12,8 +12,6 @@
 ## User Stories 
 
 - [x] **User Story:** User can press a button to start and stop the display.
-
-- [x] **User Story:** User can change the interval of time controlling the change in intensity.
 
 
 

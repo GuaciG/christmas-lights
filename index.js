@@ -1,4 +1,4 @@
-$(function(){
+$(function() {
     $(".on").on("click", function() {
         $(".bulb-yellow").toggleClass("yellow");
         $(".bulb-blue").toggleClass("blue");
@@ -10,3 +10,6 @@ $(function(){
         $(".overlay").toggleClass("overlay-open");
     });
 }); 
+
+
+
